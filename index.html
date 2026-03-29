@@ -3,76 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="対戦・育成・図鑑管理・色違い厳選に役立つポケモンツールを、Reactで検索・絞り込みしながら探せるまとめサイト。"
+    />
     <title>ポケモン ツール紹介まとめ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="hero">
-      <p class="hero__badge">Pokemon Utility Hub</p>
-      <h1>ポケモン ツール紹介まとめサイト</h1>
-      <p>
-        対戦・育成・図鑑管理・色違い厳選など、目的別に使えるポケモン関連ツールをわかりやすく整理したまとめページです。
-      </p>
-      <a class="hero__cta" href="#tools">ツールを見る</a>
-    </header>
+    <div id="root"></div>
 
-    <main>
-      <section class="section" id="about">
-        <h2>このサイトについて</h2>
-        <p>
-          初心者にも使いやすいように、ツールの用途・主な機能・おすすめポイントを一目で確認できるようにしています。気になるカテゴリからチェックしてください。
-        </p>
-      </section>
-
-      <section class="section" id="tools">
-        <h2>カテゴリ別ツール紹介</h2>
-        <div class="grid">
-          <article class="card">
-            <h3>対戦ダメージ計算ツール</h3>
-            <p class="tag">対戦準備</p>
-            <p>
-              技威力・タイプ相性・努力値・持ち物などを考慮して、与ダメージと被ダメージをシミュレーションできます。
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>個体値・努力値管理ツール</h3>
-            <p class="tag">育成効率化</p>
-            <p>
-              育成途中のポケモンを一覧管理し、必要な努力値振りや性格の候補を整理できます。
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>ポケモン図鑑検索ツール</h3>
-            <p class="tag">情報収集</p>
-            <p>
-              タイプ・特性・覚える技からポケモンを逆引き検索。パーティ構築時の候補探しに便利です。
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>色違い厳選カウンター</h3>
-            <p class="tag">やりこみ</p>
-            <p>
-              試行回数を記録して確率を可視化。モチベーション維持に役立つトラッキング機能付きです。
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="pick">
-        <h2>目的別おすすめ</h2>
-        <ul>
-          <li><strong>対戦に勝ちたい:</strong> ダメージ計算 + 図鑑検索の併用</li>
-          <li><strong>育成を時短したい:</strong> 個体値・努力値管理ツール中心</li>
-          <li><strong>コレクションを楽しみたい:</strong> 色違い厳選カウンター活用</li>
-        </ul>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <small>© 2026 ポケモン ツール紹介まとめ</small>
-    </footer>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" src="app.js"></script>
   </body>
 </html>
