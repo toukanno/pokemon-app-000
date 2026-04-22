@@ -1,5 +1,6 @@
 :root {
   color-scheme: dark;
+  --surface-strong: rgba(17, 24, 46, 0.9);
   --bg: #060a18;
   --surface: rgba(17, 24, 46, 0.72);
   --text: #eef3ff;
@@ -67,6 +68,11 @@ body {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 2.6rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface-strong);
+  backdrop-filter: blur(8px);
 }
 
 .logo {
@@ -82,6 +88,12 @@ body {
   padding: 0.45rem 0.8rem;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.02);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.nav__link:hover {
+  border-color: rgba(110, 231, 255, 0.6);
+  transform: translateY(-1px);
 }
 
 .hero__content {
@@ -263,6 +275,25 @@ main {
 .card p {
   margin: 0;
   color: var(--muted);
+}
+
+.card__link {
+  margin-top: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #dff9ff;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.card__link::after {
+  content: "↗";
+}
+
+.card__link:hover {
+  color: var(--primary);
 }
 
 .tag {

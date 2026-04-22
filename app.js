@@ -8,6 +8,8 @@ const tools = [
     usage: "勝率アップ",
     description:
       "技威力・タイプ相性・努力値・持ち物を考慮し、与ダメージ・被ダメージの見積もりを最短で確認。",
+    url: "https://calc.pokemonshowdown.com/",
+    ctaLabel: "ダメージ計算アプリを開く",
   },
   {
     id: "training",
@@ -75,18 +77,18 @@ function App() {
         </nav>
 
         <div className="hero__content">
-          <p className="hero__badge">React Powered Directory</p>
+          <p className="hero__badge">Modern React Directory</p>
           <h1>ポケモン ツール紹介まとめサイト</h1>
           <p className="hero__lead">
-            Reactで検索とカテゴリ絞り込みに対応。対戦・育成・図鑑管理・色違い厳選など、目的に合うツールをすぐ見つけられます。
+            モダンなカードUIで、対戦・育成・図鑑管理・色違い厳選に使えるツールを高速に探索。検索とカテゴリ絞り込みですぐ辿り着けます。
           </p>
 
           <div className="hero__actions">
             <a className="button button--primary" href="#tool-grid">
               ツールを見る
             </a>
-            <a className="button button--ghost" href="#pick">
-              目的別おすすめ
+            <a className="button button--ghost" href="https://calc.pokemonshowdown.com/" target="_blank" rel="noreferrer noopener">
+              ダメージ計算アプリ
             </a>
           </div>
         </div>
@@ -144,6 +146,16 @@ function App() {
                   </div>
                   <h3>{tool.title}</h3>
                   <p>{tool.description}</p>
+                  {tool.url ? (
+                    <a
+                      className="card__link"
+                      href={tool.url}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      {tool.ctaLabel || "ツールを開く"}
+                    </a>
+                  ) : null}
                 </article>
               ))
             ) : (
